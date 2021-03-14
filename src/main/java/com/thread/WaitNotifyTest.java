@@ -26,6 +26,7 @@ public class WaitNotifyTest {
             }
         }).start();
         System.err.println("55645");
+        System.err.println("54456478"); // master分支中同步过来的修改
         new Thread(()->{
             synchronized (LOCK){
                 LOCK.notifyAll(); // 唤醒所有处于等待状态中的线程
