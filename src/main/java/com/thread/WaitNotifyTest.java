@@ -25,7 +25,7 @@ public class WaitNotifyTest {
                 }
             }
         }).start();
-
+        System.err.println("54456478");
         new Thread(()->{
             synchronized (LOCK){
                 LOCK.notifyAll(); // 唤醒所有处于等待状态中的线程
