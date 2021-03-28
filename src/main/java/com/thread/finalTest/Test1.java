@@ -1,5 +1,10 @@
 package com.thread.finalTest;
 
+import sun.security.util.Resources;
+
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.function.BiFunction;
 
 /**
@@ -21,6 +26,11 @@ public class Test1 {
 
         Class<Integer> type = Integer.TYPE;
         testBiFunction((p1, p2)-> p1+p2);
+
+        InputStream inp = Test1.class.getResourceAsStream("/test.properties");
+
+        System.err.println("inp:::"+inp);
+//        Files.copy(Paths.get(""), Paths.get(""));
     }
 
     public static void testBiFunction(BiFunction<Integer, Integer, Integer> biFunction){
